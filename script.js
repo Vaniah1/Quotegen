@@ -87,6 +87,97 @@ const quotes = [
       "Nothing in life is to be feared, it is only to be understood. Now is the time to understand more, so that we may fear less.",
     author: "Marie Curie",
   },
+  {
+    quote: "Believe you can and you're halfway there.",
+    author: "Theodore Roosevelt",
+  },
+  {
+    quote: "It does not matter how slowly you go as long as you do not stop.",
+    author: "Confucius",
+  },
+  {
+    quote:
+      "Our lives begin to end the day we become silent about things that matter.",
+    author: "Martin Luther King Jr.",
+  },
+  {
+    quote:
+      "Do not go where the path may lead, go instead where there is no path and leave a trail.",
+    author: "Ralph Waldo Emerson",
+  },
+  {
+    quote:
+      "In the end, it's not the years in your life that count. It's the life in your years.",
+    author: "Abraham Lincoln",
+  },
+  {
+    quote: "Life is either a daring adventure or nothing at all.",
+    author: "Helen Keller",
+  },
+  {
+    quote:
+      "Many of life's failures are people who did not realize how close they were to success when they gave up.",
+    author: "Thomas A. Edison",
+  },
+  {
+    quote:
+      "If you want to live a happy life, tie it to a goal, not to people or things.",
+    author: "Albert Einstein",
+  },
+  {
+    quote: "Your passion is waiting for your courage to catch up.",
+    author: "Isabelle Lafleche",
+  },
+  {
+    quote:
+      "Believe in yourself and all that you are. Know that there is something inside you that is greater than any obstacle.",
+    author: "Christian D. Larson",
+  },
+  {
+    quote: "The only way to do great work is to love what you do.",
+    author: "Steve Jobs",
+  },
+  {
+    quote:
+      "The future belongs to those who believe in the beauty of their dreams.",
+    author: "Eleanor Roosevelt",
+  },
+  {
+    quote: "The best way to predict the future is to create it.",
+    author: "Peter Drucker",
+  },
+  {
+    quote:
+      "Happiness is not something ready-made. It comes from your own actions.",
+    author: "Dalai Lama",
+  },
+  {
+    quote:
+      "The only limit to our realization of tomorrow will be our doubts of today.",
+    author: "Franklin D. Roosevelt",
+  },
+  {
+    quote: "The journey of a thousand miles begins with a single step.",
+    author: "Lao Tzu",
+  },
+  {
+    quote: "Believe you can and you're halfway there.",
+    author: "Theodore Roosevelt",
+  },
+  {
+    quote:
+      "The only person you are destined to become is the person you decide to be.",
+    author: "Ralph Waldo Emerson",
+  },
+  {
+    quote:
+      "Happiness is not something ready-made. It comes from your own actions.",
+    author: "Dalai Lama",
+  },
+  {
+    quote: "The best way to predict the future is to create it.",
+    author: "Peter Drucker",
+  },
 ];
 
 newQuote();
@@ -96,18 +187,6 @@ newQuote();
 // It sets the opacity of the quote and author text elements to 0
 // After a delay of 500ms, it updates the quote and author text elements with the new quote
 // And sets the opacity of the quote and author text elements back to 1
-function newQuote() {
-  const randomIndex = Math.floor(Math.random() * quotes.length);
-  const randomQuote = quotes[randomIndex];
-  quoteText.style.opacity = 0;
-  authorText.style.opacity = 0;
-  setTimeout(() => {
-    quoteText.textContent = randomQuote.quote;
-    authorText.textContent = randomQuote.author;
-    quoteText.style.opacity = 1;
-    authorText.style.opacity = 1;
-  }, 500);
-}
 
 // Hide Loading
 function complete() {
@@ -120,15 +199,11 @@ function newQuote() {
   const randomQuote = quotes[randomIndex];
   quoteText.textContent = randomQuote.quote;
   authorText.textContent = randomQuote.author;
-}
-// This function generates a new random quote from the quotes array
-// It first generates a random index using Math.random() and Math.floor()
-// It then retrieves the quote object at that index from the quotes array
-// Finally, it updates the quote and author text elements with the new quote
 
-// Event Listeners
-newQuoteBtn.addEventListener("click", newQuote);
-twitterBtn.addEventListener("click", tweetQuote);
+  // Event Listeners
+  newQuoteBtn.addEventListener("click", newQuote);
+  twitterBtn.addEventListener("click", tweetQuote);
+}
 
 // On Load
 getQuotes();
